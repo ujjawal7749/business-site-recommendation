@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_mapview.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8cfecf0240.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav1">
+      <div class="logo">Brand</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn"> <i class="fas fa-bars"></i></label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
+        <!-- <li><a href="#">Skills</a></li> -->
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="result"><p>Suitable locations</p></div>
+
+    <table id="lists">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+        <th>Place</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Berglunds snabbköp</td>
+        <td>Christina Berglund</td>
+        <td>Sweden</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Königlich Essen</td>
+        <td>Philip Cramer</td>
+        <td>Germany</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>North/South</td>
+        <td>Simon Crowther</td>
+        <td>UK</td>
+        <td>Bengaluru</td>
+      </tr>
+      <tr>
+        <td>Paris spécialités</td>
+        <td>Marie Bertrand</td>
+        <td>France</td>
+        <td>Bengaluru</td>
+      </tr>
+    </table>
+    <iframe class="map" src="{{url_for('static', filename='map_clusters.html') }}" frameborder="0"></iframe>
+    <footer id="footer">
+      <a href="#"><i class="fa-brands fa-twitter footer-icon"></i></a>
+      <a href="#"> <i class="fa-brands fa-facebook-f footer-icon"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram footer-icon"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope footer-icon"></i></a>
+      <p>© Copyright Business Site Selection</p>
+    </footer>
+    <script src="{{url_for('static', filename='javascript/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{url_for('static', filename='javascript/include-html.min.js') }}"></script>
+  </body>
+</html>

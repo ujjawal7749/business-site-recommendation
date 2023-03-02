@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <title> Responsive Contact Us Form  | CodingLab </title>-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_contact.css') }}" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    {% if submit %}
+    <script>
+    alert(" Your response has been successfully submitted");
+    </script>
+    {% endif %}
+    <nav class="nav1">
+      <div class="logo">BUSINESS SITE</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn"> <i class="fas fa-bars"></i></label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
+        <!-- <li><a href="#">Skills</a></li> -->
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class = "main">
+    <h1 class="header"> Contact Us </h1>
+    </div>
+    <div class="container">      
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Yelahanka</div>
+            <div class="text-two">Bengaluru - 560064</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91-9772996545</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">admin@bspred.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <form action="{{ url_for("contactform")}}" method="POST">
+            <div class="input-box">
+              <input type="text" name="cname" placeholder="Enter your name"  required/>
+            </div>
+            <div class="input-box">
+              <input type="text" name="email" placeholder="Enter your email" required/>
+            </div>
+            <div class="input-box message-box">
+              <textarea name="message" name="message" id="" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+            </div>
+            <button class="btn" type="submit" id="search-input">
+               Submit
+            </button>
+          </form>
+         
+      </div>
+    </div>
+  </body>
+</html>
